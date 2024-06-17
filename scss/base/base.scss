@@ -2,10 +2,31 @@
 @import "./_vars.scss";
 @import "./_mixins-extends.scss";
 
+@import "../blocks/_header.scss"; 
 body{
     background-color: $color-bg;
 }
 .container{
     max-width: 1104px;
     margin: auto;
+}
+.logo {
+    width: 32px;
+    height: 32px;
+}
+h1{
+    &.title{
+        @include font-style($color-title,$font-main,800,52px,62px,-.5px);
+        @media (max-width:470px) {
+        @include font-style($color-title,$font-main,800,30px,35px,-.5px);
+            
+        }
+    }
+}
+.description{
+    @include font-style($color-description,$font-main,400,20px,30px,-.25px);
+    @media (max-width:470px) {
+    @include font-style($color-description,$font-main,400,11px,16.5px,-.25px);
+
+    }
 }

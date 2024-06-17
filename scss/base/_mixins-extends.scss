@@ -6,3 +6,22 @@
     line-height: $lh;
     letter-spacing: $ls;
 }
+%none{
+    display: none;
+}
+%flex-x{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+%flex-y{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+%flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
