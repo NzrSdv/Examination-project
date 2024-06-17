@@ -1,27 +1,31 @@
-@mixin font-style($color,$ff,$fw,$fz,$lh,$ls){
-    color:$color;
-    font-family: $ff;
-    font-weight: $fw;
-    font-size: $fz;
-    line-height: $lh;
-    letter-spacing: $ls;
+@mixin font-style($color, $ff, $fw, $fz, $lh, $ls) {
+  color: $color;
+  font-family: $ff;
+  font-weight: $fw;
+  font-size: $fz;
+  line-height: $lh;
+  letter-spacing: $ls;
 }
-%none{
-    display: none;
+%none {
+  display: none;
 }
-%flex-x{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+%flex-x {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-%flex-y{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+%flex-y {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-%flex-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%button-accent {
+  border-radius: 2px;
+  padding: 10px 20px;
 }

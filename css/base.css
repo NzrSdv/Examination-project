@@ -60,13 +60,13 @@ button, input {
   display: none;
 }
 
-.header .header--top .container .nav .nav--list, .header .header--top .container {
+.header .header--bottom .container .text--content .buttons, .header .header--top .container .nav .nav--list, .header .header--top .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.header .header--bottom .container {
+.header .header--bottom .container .text--content, .header .header--bottom .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -138,6 +138,35 @@ button, input {
 .header .header--bottom .container .text--content {
   max-width: 768px;
   text-align: center;
+  gap: 32px;
+}
+.header .header--bottom .container .text--content .buttons {
+  height: 48px;
+  gap: 12px;
+}
+@media (max-width: 470px) {
+  .header .header--bottom .container .text--content .buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+  }
+}
+.header .header--bottom .container .text--content .buttons a {
+  color: auto;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+  padding: 12px 32px;
+}
+.header .header--bottom .container .text--content .buttons .first-btn {
+  background-color: rgb(93, 93, 255);
+  color: rgb(255, 255, 255);
+}
+.header .header--bottom .container .text--content .buttons .second-btn {
+  background-color: rgb(51, 54, 58);
+  color: rgb(197, 210, 220);
 }
 body {
   background-color: rgb(21, 23, 25);
@@ -166,8 +195,8 @@ h1.title {
     color: rgb(217, 227, 234);
     font-family: "Inter", sans-serif;
     font-weight: 800;
-    font-size: 30px;
-    line-height: 35px;
+    font-size: 41.6px;
+    line-height: 49.6px;
     letter-spacing: -0.5px;
   }
 }
@@ -185,8 +214,8 @@ h1.title {
     color: rgb(155, 169, 180);
     font-family: "Inter", sans-serif;
     font-weight: 400;
-    font-size: 11px;
-    line-height: 16.5px;
+    font-size: 16px;
+    line-height: 24px;
     letter-spacing: -0.25px;
   }
 }

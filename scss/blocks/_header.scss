@@ -73,12 +73,29 @@
       .text--content {
         max-width: 768px;
         text-align: center;
-        .title {
-            
-        }
-        .description {
-        }
+        @extend %flex-y;
+        gap:32px;
         .buttons {
+          height: 48px;
+          @extend %flex-x;
+          gap:12px;
+          @media (max-width:470px) {
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch;
+          }
+          a{
+            @include font-style(auto,$font-main,500,16px,24px,-.25px);
+            padding: 12px 32px;
+          }
+          .first-btn{
+            background-color: $color-accent;
+            color: $color-white;
+          }
+          .second-btn{
+            background-color: $color-second-btn;
+            color:$color-second-text;
+          }
         }
       }
       .video--content {
