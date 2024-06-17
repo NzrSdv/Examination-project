@@ -1,0 +1,7 @@
+@import "./_reset.scss";
+@import "./_vars.scss";
+@import "./_mixins-extends.scss";
+
+body{
+    background-color: $color-bg;
+}
