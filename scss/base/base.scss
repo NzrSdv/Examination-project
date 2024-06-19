@@ -5,6 +5,7 @@
 @import "../blocks/_header.scss"; 
 body{
     background-color: $color-bg;
+    overflow: hidden;
 }
 .container{
     max-width: 1104px;

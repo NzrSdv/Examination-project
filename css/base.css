@@ -76,6 +76,9 @@ button, input {
 .header {
   padding: 0 30px;
 }
+.header .header--top {
+  position: relative;
+}
 .header .header--top .container {
   height: 80px;
 }
@@ -132,6 +135,24 @@ button, input {
     display: flex;
   }
 }
+.header .header--top .decoration-img {
+  width: 730px;
+  height: 607px;
+  position: absolute;
+  background: url("../../imgs/header/decoration-one.png");
+  background-position: center;
+  background-size: cover;
+  top: -224px;
+  right: -326px;
+}
+@media (max-width: 768px) {
+  .header .header--top .decoration-img {
+    width: 292px;
+    height: 242px;
+    top: -87px;
+    right: -125px;
+  }
+}
 .header .header--bottom {
   padding-top: 80px;
 }
@@ -170,6 +191,7 @@ button, input {
 }
 body {
   background-color: rgb(21, 23, 25);
+  overflow: hidden;
 }
 
 .container {

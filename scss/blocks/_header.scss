@@ -1,6 +1,7 @@
 .header {
-  padding:0 30px;
+  padding: 0 30px;
   .header--top {
+    position: relative;
     .container {
       @extend %flex-x;
       height: 80px;
@@ -8,7 +9,7 @@
         .nav--list {
           @extend %flex-x;
           gap: 51px;
-          @media (max-width: 768px) {
+          @include mediaTablet {
             gap: 6dvw;
           }
           a {
@@ -16,14 +17,14 @@
             padding: 10px 20px;
             .icon {
               @extend %none;
-              @media (max-width: 768px) {
+              @include mediaTablet {
                 display: block;
                 width: 24px;
                 height: 24px;
               }
             }
             .link--text {
-              @media (max-width: 768px) {
+              @include mediaTablet {
                 display: none;
               }
             }
@@ -39,7 +40,7 @@
                 -0.25px
               );
 
-              @media (max-width: 768px) {
+              @include mediaTablet {
                 display: block;
                 border: 1px solid $color-accent;
               }
@@ -57,12 +58,28 @@
                 -0.25px
               );
               background-color: $color-accent;
-              @media (max-width: 768px) {
+              @include mediaTablet {
                 display: flex;
               }
             }
           }
         }
+      }
+    }
+    .decoration-img{
+      width: 730px;
+      height: 607px;
+      position: absolute;
+      background: url("../../imgs/header/decoration-one.png");
+      background-position:center;
+      background-size: cover;
+      top:-224px;
+      right: -326px;
+      @include mediaTablet{
+        width:292px;
+        height: 242px;
+        top:-87px;
+        right: -125px;
       }
     }
   }
@@ -74,27 +91,27 @@
         max-width: 768px;
         text-align: center;
         @extend %flex-y;
-        gap:32px;
+        gap: 32px;
         .buttons {
           height: 48px;
           @extend %flex-x;
-          gap:12px;
-          @media (max-width:470px) {
+          gap: 12px;
+         @include mediaMobile{
             flex-wrap: wrap;
             justify-content: center;
             align-items: stretch;
           }
-          a{
-            @include font-style(auto,$font-main,500,16px,24px,-.25px);
+          a {
+            @include font-style(auto, $font-main, 500, 16px, 24px, -0.25px);
             padding: 12px 32px;
           }
-          .first-btn{
+          .first-btn {
             background-color: $color-accent;
             color: $color-white;
           }
-          .second-btn{
+          .second-btn {
             background-color: $color-second-btn;
-            color:$color-second-text;
+            color: $color-second-text;
           }
         }
       }
