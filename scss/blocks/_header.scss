@@ -1,8 +1,7 @@
 .header {
   padding: 0 30px;
-  overflow-x: hidden;
-  overflow-y: visible;
   .header--top {
+    position: relative;
     .container {
       @extend %flex-x;
       height: 80px;

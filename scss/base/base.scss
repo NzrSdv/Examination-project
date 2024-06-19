@@ -5,32 +5,22 @@
 @import "../blocks/_header.scss"; 
 body{
     background-color: $color-bg;
-    overflow: hidden;
-    .decoration-img{
-        max-width: 730px;
-          height: 607px;
+    position: relative;
+    .decoration{
+        max-width: 501px;
+        max-height: 364px;
         position: absolute;
-        top: -224px;
-        right: -326px;
+        top: 0;
+        right: 0;
+       img{
         @include mediaTablet{
-            width:292px;
-            height: 242px;
-            top:-87px;
-            right: -130px;
-          }
-       
-        img{
-          width: 730px;
-          height: 607px;
-          @include mediaTablet{
-            width:292px;
-            height: 242px;
-            top:-87px;
-            right: -125px;
-          }
+            width: 300px;
+            height: 217px;
         }
+       }
+    }
 }
-}
+
 .container{
     max-width: 1104px;
     margin: auto;

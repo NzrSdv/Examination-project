@@ -75,8 +75,9 @@ button, input {
 
 .header {
   padding: 0 30px;
-  overflow-x: hidden;
-  overflow-y: visible;
+}
+.header .header--top {
+  position: relative;
 }
 .header .header--top .container {
   height: 80px;
@@ -173,33 +174,19 @@ button, input {
 }
 body {
   background-color: rgb(21, 23, 25);
-  overflow: hidden;
+  position: relative;
 }
-body .decoration-img {
-  max-width: 730px;
-  height: 607px;
+body .decoration {
+  max-width: 501px;
+  max-height: 364px;
   position: absolute;
-  top: -224px;
-  right: -326px;
+  top: 0;
+  right: 0;
 }
 @media (max-width: 768px) {
-  body .decoration-img {
-    width: 292px;
-    height: 242px;
-    top: -87px;
-    right: -130px;
-  }
-}
-body .decoration-img img {
-  width: 730px;
-  height: 607px;
-}
-@media (max-width: 768px) {
-  body .decoration-img img {
-    width: 292px;
-    height: 242px;
-    top: -87px;
-    right: -125px;
+  body .decoration img {
+    width: 300px;
+    height: 217px;
   }
 }
 
