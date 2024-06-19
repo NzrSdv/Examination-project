@@ -1,0 +1,165 @@
+.main {
+  padding: 80px 0 50px;
+  .sign-form {
+    .container {
+        padding: 0px 25px;
+      @extend %flex-y;
+      align-items: center;
+      gap:80px;
+      .title {
+        text-align: center;
+      }
+      .form {
+        max-width: 401px;
+        height: 644px;
+        @extend %flex-y;
+        align-items: stretch;
+        gap:16px;
+        input {
+          padding: 12px 16px;
+          text-align: start;
+          border-radius: 1px;
+          &[type=button],
+          &[type=submit] {
+              text-align: center;
+            @include font-style(
+              $color-white,
+              $font-main,
+              400,
+              16px,
+              24px,
+              -0.25px
+            );
+          }
+          &[type=text],&[type=email],&[type=password] {
+            @include font-style(initial, $font-main, 400, 16px, 24px, -0.25px);
+            &::placeholder {
+              @include font-style(
+                $color-sign-placeholder,
+                $font-main,
+                400,
+                16px,
+                24px,
+                -0.25px
+              );
+            }
+          }
+        }
+        .google-btn{
+            position: relative;
+            height: 48px;
+            .google {
+                width: 100%;
+              text-align: center;
+              background-color: $color-sign-google;
+              position: absolute;
+            }
+            .google-ico{
+              width: 31px;
+              height: 25px;
+              border-right:1px solid $color-sign-google-ico;
+              position: absolute;
+              z-index: 2;
+              background:url("../../imgs/sign/google-ico.svg");
+              background-position:center;
+              background-repeat: no-repeat;
+              background-position:left;
+              top:12px;
+              left: 16px;
+            }
+        }
+        .selection-text {
+          @extend %flex-x;
+          align-items: center;
+          .line-dots {
+            width: 90px;
+            height: 1px;
+            border-bottom: 1px dotted $color-second-btn;
+          }
+          .description {
+              text-align: center;
+            @include font-style(
+              $color-sign-select,
+              $font-main,
+              400,
+              16px,
+              1.5,
+              -0.25px
+            );
+        }
+        .input-complex {
+          @extend %flex-y;
+          align-items: stretch;
+          // align-items: flex-start;
+          .label {
+            @include font-style(
+              $color-second-text,
+              $font-main,
+              500,
+              14px,
+              22px,
+              initial
+            );
+            position: relative;
+            &:after {
+              content: "*";
+              color: $color-sign-google;
+              position: absolute;
+            }
+          }
+          .input {
+            border: 1px solid $color-sign-input-border;
+            background: transparent;
+            color: $color-sign-placeholder;
+          }
+        }
+        .privacy-text {
+            text-align: center;
+          @include font-style(
+            $color-sign-placeholder,
+            $font-main,
+            400,
+            16px,
+            24px,
+            -0.25px
+          );
+          a{
+              text-decoration:underline;
+            @include font-style(
+                $color-sign-select,
+                $font-main,
+                400,
+                16px,
+                24px,
+                -0.25px
+              );
+          }
+        }
+        .SignUp-btn{
+            background-color: $color-accent;
+        }
+        .link-label{
+            text-align: center;
+            @include font-style(
+              $color-sign-select,
+              $font-main,
+              400,
+              16px,
+              24px,
+              -0.25px
+            );
+            .link {
+                @include font-style(
+              $color-accent,
+              $font-main,
+              400,
+              16px,
+              24px,
+              -0.25px
+            );
+            }
+        }
+      }
+    }
+  }
+}

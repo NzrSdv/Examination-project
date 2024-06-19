@@ -3,10 +3,17 @@
 @import "./_mixins-extends.scss";
 
 @import "../blocks/_header.scss"; 
+
+@import "../blocks/_sign.scss";
+
 body{
+    &::-webkit-scrollbar{
+        display: none;
+    }
     background-color: $color-bg;
     position: relative;
     .decoration{
+        z-index: -2;
         max-width: 501px;
         max-height: 364px;
         position: absolute;
@@ -31,9 +38,9 @@ body{
 }
 h1{
     &.title{
-        @include font-style($color-title,$font-main,800,52px,62px,-.5px);
+        @include font-style($color-title,$font-main,800,52px,1.2,-.5px);
         @include mediaMobile{
-        @include font-style($color-title,$font-main,800,41.6px,49.6px,-.5px);
+        @include font-style($color-title,$font-main,800,34px,1.2,-.5px);
             
         }
     }
