@@ -1,7 +1,8 @@
 .header {
   padding: 0 30px;
+  overflow-x: hidden;
+  overflow-y: visible;
   .header--top {
-    position: relative;
     .container {
       @extend %flex-x;
       height: 80px;
@@ -66,21 +67,7 @@
         }
       }
     }
-    .decoration-img{
-      width: 730px;
-      height: 607px;
-      position: absolute;
-      background: url("../../imgs/header/decoration-one.png");
-      background-position:center;
-      background-size: cover;
-      top:-224px;
-      right: -326px;
-      @include mediaTablet{
-        width:292px;
-        height: 242px;
-        top:-87px;
-        right: -125px;
-      }
+    
     }
   }
   .header--bottom {
@@ -119,4 +106,3 @@
       }
     }
   }
-}

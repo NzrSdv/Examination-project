@@ -60,13 +60,13 @@ button, input {
   display: none;
 }
 
-.header .header--bottom .container .text--content .buttons, .header .header--top .container .nav .nav--list, .header .header--top .container {
+.header--bottom .container .text--content .buttons, .header .header--top .container .nav .nav--list, .header .header--top .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.header .header--bottom .container .text--content, .header .header--bottom .container {
+.header--bottom .container .text--content, .header--bottom .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -75,9 +75,8 @@ button, input {
 
 .header {
   padding: 0 30px;
-}
-.header .header--top {
-  position: relative;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 .header .header--top .container {
   height: 80px;
@@ -135,44 +134,27 @@ button, input {
     display: flex;
   }
 }
-.header .header--top .decoration-img {
-  width: 730px;
-  height: 607px;
-  position: absolute;
-  background: url("../../imgs/header/decoration-one.png");
-  background-position: center;
-  background-size: cover;
-  top: -224px;
-  right: -326px;
-}
-@media (max-width: 768px) {
-  .header .header--top .decoration-img {
-    width: 292px;
-    height: 242px;
-    top: -87px;
-    right: -125px;
-  }
-}
-.header .header--bottom {
+
+.header--bottom {
   padding-top: 80px;
 }
-.header .header--bottom .container .text--content {
+.header--bottom .container .text--content {
   max-width: 768px;
   text-align: center;
   gap: 32px;
 }
-.header .header--bottom .container .text--content .buttons {
+.header--bottom .container .text--content .buttons {
   height: 48px;
   gap: 12px;
 }
 @media (max-width: 470px) {
-  .header .header--bottom .container .text--content .buttons {
+  .header--bottom .container .text--content .buttons {
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
   }
 }
-.header .header--bottom .container .text--content .buttons a {
+.header--bottom .container .text--content .buttons a {
   color: auto;
   font-family: "Inter", sans-serif;
   font-weight: 500;
@@ -181,17 +163,44 @@ button, input {
   letter-spacing: -0.25px;
   padding: 12px 32px;
 }
-.header .header--bottom .container .text--content .buttons .first-btn {
+.header--bottom .container .text--content .buttons .first-btn {
   background-color: rgb(93, 93, 255);
   color: rgb(255, 255, 255);
 }
-.header .header--bottom .container .text--content .buttons .second-btn {
+.header--bottom .container .text--content .buttons .second-btn {
   background-color: rgb(51, 54, 58);
   color: rgb(197, 210, 220);
 }
 body {
   background-color: rgb(21, 23, 25);
   overflow: hidden;
+}
+body .decoration-img {
+  max-width: 730px;
+  height: 607px;
+  position: absolute;
+  top: -224px;
+  right: -326px;
+}
+@media (max-width: 768px) {
+  body .decoration-img {
+    width: 292px;
+    height: 242px;
+    top: -87px;
+    right: -130px;
+  }
+}
+body .decoration-img img {
+  width: 730px;
+  height: 607px;
+}
+@media (max-width: 768px) {
+  body .decoration-img img {
+    width: 292px;
+    height: 242px;
+    top: -87px;
+    right: -125px;
+  }
 }
 
 .container {

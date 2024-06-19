@@ -6,6 +6,30 @@
 body{
     background-color: $color-bg;
     overflow: hidden;
+    .decoration-img{
+        max-width: 730px;
+          height: 607px;
+        position: absolute;
+        top: -224px;
+        right: -326px;
+        @include mediaTablet{
+            width:292px;
+            height: 242px;
+            top:-87px;
+            right: -130px;
+          }
+       
+        img{
+          width: 730px;
+          height: 607px;
+          @include mediaTablet{
+            width:292px;
+            height: 242px;
+            top:-87px;
+            right: -125px;
+          }
+        }
+}
 }
 .container{
     max-width: 1104px;
@@ -18,7 +42,7 @@ body{
 h1{
     &.title{
         @include font-style($color-title,$font-main,800,52px,62px,-.5px);
-        @media (max-width:470px) {
+        @include mediaMobile{
         @include font-style($color-title,$font-main,800,41.6px,49.6px,-.5px);
             
         }
@@ -26,7 +50,7 @@ h1{
 }
 .description{
     @include font-style($color-description,$font-main,400,20px,30px,-.25px);
-    @media (max-width:470px) {
+    @include mediaMobile{
     @include font-style($color-description,$font-main,400,16px,24px,-.25px);
 
     }
