@@ -66,10 +66,16 @@ button, input {
   align-items: center;
 }
 
-.main .sign-form .container .form .input-complex-section .input-complex, .main .sign-form .container .form .input-complex-section, .main .sign-form .container .form, .main .sign-form .container, .header--bottom .container .text--content, .header--bottom .container {
+.main .sign-form .container .form .input-complex-section .input-complex, .main .sign-form .container .form .input-complex-section, .main .sign-form .container .form, .main .sign-form .container, .header--bottom .container .video--content, .header--bottom .container .text--content, .header--bottom .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+}
+
+.header--bottom .container .video--content .play-btn {
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -139,13 +145,17 @@ button, input {
 .header--bottom {
   padding-top: 80px;
 }
+.header--bottom .container {
+  gap: 64px;
+}
 .header--bottom .container .text--content {
   max-width: 768px;
+  min-height: 218px;
   text-align: center;
   gap: 32px;
 }
 .header--bottom .container .text--content .buttons {
-  height: 48px;
+  min-height: 48px;
   gap: 12px;
 }
 @media (max-width: 470px) {
@@ -172,6 +182,66 @@ button, input {
   background-color: rgb(51, 54, 58);
   color: rgb(197, 210, 220);
 }
+.header--bottom .container .video--content {
+  position: relative;
+  width: minmax(71dvw, 1024px);
+  z-index: 2;
+}
+.header--bottom .container .video--content .video--img {
+  z-index: 1;
+  max-width: 100%;
+  opacity: 1;
+}
+.header--bottom .container .video--content .play-btn {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  transition: ease-in-out 0.2s all;
+  background: linear-gradient(213.57deg, rgba(235, 241, 245, 0.8) 14.42%, #ebf1f5 84.52%);
+}
+@media (max-width: 768px) {
+  .header--bottom .container .video--content .play-btn {
+    width: 10dvw;
+    height: 10dvw;
+  }
+}
+.header--bottom .container .video--content .play-btn:hover {
+  opacity: 0.7;
+}
+.header--bottom .container .video--content .play-btn .play-btn-triangle {
+  width: 40%;
+  aspect-ratio: 22/17;
+  background: url("../../imgs/header/play-btn-ico.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.header--bottom .container .decoration-second {
+  width: 563px;
+  max-height: 551px;
+  position: absolute;
+  z-index: -1;
+  left: 83px;
+  bottom: -63px;
+}
+@media (max-width: 768px) {
+  .header--bottom .container .decoration-second {
+    width: 300px;
+    height: 294px;
+    left: 0;
+  }
+}
+@media (max-width: 470px) {
+  .header--bottom .container .decoration-second {
+    width: minmax(128px, 188px);
+    height: minmax(125px, 184px);
+  }
+}
+
 .main {
   padding: 80px 0 50px;
 }
