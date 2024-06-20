@@ -2,19 +2,55 @@
   padding: 80px 0 50px;
   .sign-form {
     .container {
-        padding: 0px 25px;
+        padding: 0px 10px;
       @extend %flex-y;
       align-items: center;
       gap:80px;
       .title {
         text-align: center;
       }
-      .form {
-        max-width: 401px;
+      #sign-up{
         height: 644px;
+      }
+      #sign-in{
+        height: 444px;
+          
+        .additional-info-section {
+          @extend %flex-x;
+          .link-label{
+            @extend %flex-x;
+            gap:8px;
+          }
+          .check-box {
+            position: relative;
+            opacity: 0;
+            cursor: pointer;
+            &:checked ~ .ico {
+              padding: 0;
+              & .checked-img{
+                display: block;
+              }
+            }
+          }
+          
+          .ico {
+            position: absolute;
+            padding:8px;
+            border-radius: 4px;
+            border: 1px solid $color-accent;
+            .checked-img {
+              @extend %none;
+            }
+          }
+        }
+      }
+      .form {
+        gap:16px;
+        max-width: 401px;
         @extend %flex-y;
         align-items: stretch;
-        gap:16px;
+        gap:24px;
+        
         input {
           padding: 12px 16px;
           text-align: start;
@@ -60,22 +96,19 @@
               border-right:1px solid $color-sign-google-ico;
               position: absolute;
               z-index: 2;
-              background:url("../../imgs/sign/google-ico.svg");
-              background-position:center;
-              background-repeat: no-repeat;
-              background-position:left;
               top:12px;
               left: 16px;
+              @extend %flex-x;
+              justify-content: flex-start;
+              .icon{
+                width: 14px;
+                height: 14px;
+              }
             }
         }
         .selection-text {
           @extend %flex-x;
           align-items: center;
-          .line-dots {
-            width: 90px;
-            height: 1px;
-            border-bottom: 1px dotted $color-second-btn;
-          }
           .description {
               text-align: center;
             @include font-style(
@@ -87,52 +120,64 @@
               -0.25px
             );
         }
-        .input-complex {
-          @extend %flex-y;
-          align-items: stretch;
-          // align-items: flex-start;
-          .label {
-            @include font-style(
-              $color-second-text,
-              $font-main,
-              500,
-              14px,
-              22px,
-              initial
-            );
-            position: relative;
-            &:after {
-              content: "*";
-              color: $color-sign-google;
-              position: absolute;
-            }
-          }
-          .input {
-            border: 1px solid $color-sign-input-border;
-            background: transparent;
-            color: $color-sign-placeholder;
+          .line-dots {
+            width: 90px;
+            height: 1px;
+            border-bottom: 1px dotted $color-second-btn;
           }
         }
-        .privacy-text {
-            text-align: center;
-          @include font-style(
-            $color-sign-placeholder,
-            $font-main,
-            400,
-            16px,
-            24px,
-            -0.25px
-          );
-          a{
-              text-decoration:underline;
-            @include font-style(
-                $color-sign-select,
+        .input-complex-section{
+          @extend %flex-y;
+          gap:16px;
+          align-items: stretch;
+          .input-complex {
+            @extend %flex-y;
+            align-items: stretch;
+            // align-items: flex-start;
+            gap:4px;
+            .label {
+              @include font-style(
+                $color-second-text,
                 $font-main,
-                400,
-                16px,
-                24px,
-                -0.25px
+                500,
+                14px,
+                22px,
+                initial
               );
+              position: relative;
+              &:after {
+                content: "*";
+                color: $color-sign-google;
+                position: absolute;
+              }
+            }
+            .input {
+              border: 1px solid $color-sign-input-border;
+              background: transparent;
+              color: $color-sign-placeholder;
+            }
+          }
+          .privacy-text {
+              text-align: center;
+            @include font-style(
+              $color-sign-placeholder,
+              $font-main,
+              400,
+              16px,
+              24px,
+              -0.25px
+            );
+            a{
+                text-decoration:underline;
+              @include font-style(
+                  $color-sign-select,
+                  $font-main,
+                  400,
+                  16px,
+                  24px,
+                  -0.25px
+                );
+            }
           }
         }
         .SignUp-btn{
@@ -148,17 +193,17 @@
               24px,
               -0.25px
             );
-            .link {
-                @include font-style(
-              $color-accent,
-              $font-main,
-              400,
-              16px,
-              24px,
-              -0.25px
-            );
-            }
-        }
+          }
+          .link {
+              @include font-style(
+            $color-accent,
+            $font-main,
+            400,
+            16px,
+            24px,
+            -0.25px
+          );
+          }
       }
     }
   }

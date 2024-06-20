@@ -14,7 +14,7 @@
     <header class="header">
         <div class="header--top">
             <div class="container">
-                <a href="#" class="logo">
+                <a href="../index.html" class="logo">
                     <img src="../imgs/Logo-ico.svg" alt="Logo" />
                   </a>
             </div>
@@ -24,33 +24,39 @@
         <section class="sign-form">
            <div class="container">
             <h1 class="title">Welcome. We exist to make entrepreneurism easier.</h1>
-            <form action="" class="form">
+            <form action="" class="form" id="sign-up">
                <div class="google-btn">
                     <input type="button" value="Sign up with Google" class="google">
-                    <div class="google-ico"></div>
+                    <div class="google-ico">
+                        <img src="../imgs/sign/google-ico.svg" alt="" class="icon">
+
+                    </div>
                </div>
                 <div class="selection-text">
                     <div class="line-dots"></div>
                     <p class="description">Or, register with your email</p>
                     <div class="line-dots"></div>
                 </div>
-                <div class="input-complex">
-                    <label for="full_Name" class="label">Full Name</label>
-                <input type="text" id="full_Name" class="input" placeholder="First and last name">
+                <div class="input-complex-section">
+
+                    <div class="input-complex">
+                        <label for="full_Name" class="label">Full Name</label>
+                    <input type="text" id="full_Name" class="input" placeholder="First and last name">
+                    </div>
+                    <div class="input-complex">
+                        <label for="company_Name" class="label">Company Name</label>
+                    <input type="text" id="company_Name" class="input" placeholder="Your company or app name">
+                    </div>
+                    <div class="input-complex">
+                        <label for="Work_email" class="label">Work Email</label>
+                    <input type="email" id="Work_email" class="input" placeholder="you@yourcompany.com">
+                    </div>
+                    <div class="input-complex">
+                        <label for="Password" class="label">Password</label>
+                    <input type="password" id="Password" class="input" placeholder="Password (at least 10 characters)">
+                    </div>
+                    <label for="#" class="privacy-text">I agree to be contacted by Open PRO about this offer as per the Open PRO <a href="#"> Privacy Policy</a>.</label>
                 </div>
-                <div class="input-complex">
-                    <label for="company_Name" class="label">Company Name</label>
-                <input type="text" id="company_Name" class="input" placeholder="Your company or app name">
-                </div>
-                <div class="input-complex">
-                    <label for="Work_email" class="label">Work Email</label>
-                <input type="email" id="Work_email" class="input" placeholder="you@yourcompany.com">
-                </div>
-                <div class="input-complex">
-                    <label for="Password" class="label">Password</label>
-                <input type="password" id="Password" class="input" placeholder="Password (at least 10 characters)">
-                </div>
-                <label for="#" class="privacy-text">I agree to be contacted by Open PRO about this offer as per the Open PRO <a href="#"> Privacy Policy</a>.</label>
                 <input type="submit" value="Sign up" class="SignUp-btn">
                 <label for="#" class="link-label">Already using Open PRO? <a href="./signIn.html" class="link">  Sign in</a></label>
 

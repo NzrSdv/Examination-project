@@ -1,15 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign In</title>
-    <link rel="stylesheet" href="../css/base.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../css/base.css" />
+  </head>
+  <body>
     <div class="decoration">
-        <img src="../imgs/second-decore-one.png" alt="">
-    </div>  
-</body>
+      <img src="../imgs/second-decore-one.png" alt="" />
+    </div>
+    <header class="header">
+      <div class="header--top">
+        <div class="container">
+          <a href="../index.html" class="logo">
+            <img src="../imgs/Logo-ico.svg" alt="Logo" />
+          </a>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="sign-form">
+        <div class="container">
+          <h1 class="title">
+            Welcome back. We exist to make entrepreneurism easier.
+          </h1>
+          <form action="" class="form" id="sign-in">
+            <div class="google-btn">
+              <input type="button" value="Sign up with Google" class="google" />
+              <div class="google-ico">
+                <img src="../imgs/sign/google-ico.svg" alt="" class="icon" />
+              </div>
+            </div>
+            <div class="selection-text">
+              <div class="line-dots"></div>
+              <p class="description">Or, sign with your email</p>
+              <div class="line-dots"></div>
+            </div>
+            <div class="input-complex-section">
+              <div class="input-complex">
+                <label for="full_Name" class="label">Full Name</label>
+                <input
+                  type="text"
+                  id="full_Name"
+                  class="input"
+                  placeholder="First and last name"
+                />
+              </div>
+              <div class="input-complex">
+                <label for="Password" class="label">Password</label>
+                <input
+                  type="password"
+                  id="Password"
+                  class="input"
+                  placeholder="Password (at least 10 characters)"
+                />
+              </div>
+              <div class="additional-info-section">
+                <label class="link-label" for="check-box">
+                  <input
+                    type="checkbox"
+                    name="check-box"
+                    id="check-box"
+                    class="check-box"
+                  />
+                  <span class="ico">
+                    <img src="../imgs/sign/checked-checkbox-ico.svg" alt="" class="checked-img">
+                  </span>
+                  Keep me signed in
+                </label>
+                <a href="" class="link">Forgot Password?</a>
+              </div>
+            </div>
+            <input type="submit" value="Sign in" class="SignUp-btn" />
+            <label for="#" class="link-label"
+              >Don’t you have an account?
+              <a href="./signUp.html" class="link"> Sign up</a></label
+            >
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
