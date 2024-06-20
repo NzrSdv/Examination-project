@@ -2,11 +2,12 @@
   padding: 80px 0 50px;
   .sign-form {
     .container {
-        padding: 0px 10px;
+        padding: 0px 5px;
       @extend %flex-y;
       align-items: center;
       gap:80px;
       .title {
+        padding: 0 10px;
         text-align: center;
       }
       #sign-up{
@@ -45,7 +46,6 @@
         }
       }
       .form {
-        gap:16px;
         max-width: 401px;
         @extend %flex-y;
         align-items: stretch;
@@ -119,6 +119,16 @@
               1.5,
               -0.25px
             );
+            @include mediaMobile{
+              @include font-style(
+                $color-sign-select,
+                $font-main,
+                400,
+                12px,
+                1.5,
+                -0.25px
+              );
+            }
         }
           .line-dots {
             width: 90px;
