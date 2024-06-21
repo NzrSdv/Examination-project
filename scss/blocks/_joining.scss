@@ -41,7 +41,7 @@
         border: 1px solid $color-join-input-text;
         @include font-style(
           $color-join-input-text,
-          $fontmain,
+          $font-main,
           400,
           16px,
           24px,
@@ -53,7 +53,7 @@
         &::placeholder {
           @include font-style(
             $color-join-input-text,
-            $fontmain,
+            $font-main,
             400,
             16px,
             24px,
@@ -90,3 +90,4 @@
     }
   }
 }
+

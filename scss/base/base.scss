@@ -13,6 +13,7 @@
 @import "../blocks/_footer.scss";
 
 body {
+
   &::-webkit-scrollbar {
     display: none;
   }
@@ -38,6 +39,8 @@ body {
 .container {
   max-width: 1104px;
   margin: 0 auto;
+  animation: photo-show ease-in-out 1s;
+
 }
  .container-titles{
   max-width: 768px;
@@ -122,5 +125,18 @@ h6.title{
       24px,
       -0.25px
     );
+  }
+}
+
+@keyframes photo-show{
+  from{
+      transform-origin: center;
+      scale: .4;
+      opacity: 0;
+  }
+  to{
+      transform-origin: center;
+      scale: 1;
+      opacity: 1;
   }
 }

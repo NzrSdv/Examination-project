@@ -25,6 +25,8 @@
         }
         @include mediaMobile {
           flex-flow: column wrap;
+          align-items: center;
+          text-align: center;
         }
         .description {
           max-width: 352px;
@@ -62,7 +64,7 @@
             @include mediaMobile {
               width: 100%;
               flex-flow: row wrap;
-              justify-content: flex-start;
+              justify-content: space-between;
               gap:min(20px,10%);
             }
             .list-element {
