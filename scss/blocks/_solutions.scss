@@ -1,0 +1,88 @@
+.solutions {
+  padding-top: 80px;
+  .container {
+    @extend %flex-y;
+    gap: 80px;
+    .solutions--text-content {
+      max-width: 768px;
+      @extend %flex-y;
+      text-align: center;
+      gap: 16px;
+      .motivational--block {
+        width: 186px;
+        height: 30px;
+        border-radius: 15px;
+        background-color: $color-motivation-bg;
+        @extend %flex-center;
+        .text {
+          @include font-style(
+            $color-motivation-text,
+            $font-main,
+            600,
+            14px,
+            22px,
+            initial
+          );
+        }
+      }
+    }
+    .solutions--main-content {
+      gap: 80px;
+      @extend %flex-y;
+      .card {
+        @extend %flex-x;
+        gap: 64px;
+        @include mediaLaptop {
+          flex-direction: column;
+          align-items: center;
+        }
+        &-reverse {
+          .card-texts {
+            order: 1;
+            @include mediaLaptop {
+              order: 0;
+            }
+          }
+          .card-img {
+            order: 0;
+            @include mediaLaptop {
+              order: 1;
+            }
+          }
+        }
+        .card-texts {
+          max-width: 500px;
+          @extend %flex-y;
+          align-items: flex-start;
+          gap: 16px;
+          @include mediaLaptop {
+            align-items: center;
+            text-align: center;
+          }
+          .titles--up {
+            @extend %flex-y;
+            align-items: flex-start;
+            gap: 9px;
+            @include mediaLaptop {
+              align-items: center;
+            }
+          }
+          .check-list {
+            .list-elements {
+              @extend %flex-x;
+              justify-content: flex-start;
+              gap: 9px;
+            }
+          }
+        }
+        .card-img {
+          width: minmax(71dvw, 540px);
+          img {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+    

@@ -3,8 +3,7 @@
     .container {
         @extend %flex-y;
         gap:52px;
-        border-bottom: 1px solid $color-sign-input-border;
-        padding-bottom: 80px;
+        
         .majorities--text-content {
             text-align: center;
             max-width: 768px;

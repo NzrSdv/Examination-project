@@ -6,11 +6,12 @@
 
 @import "../blocks/_sign.scss";
 @import "../blocks/_majorities.scss";
+@import "../blocks/_solutions.scss";
 body {
   &::-webkit-scrollbar {
     display: none;
   }
-  padding: 0 20px;
+  padding: 0 5dvw;
   background-color: $color-bg;
   position: relative;
   .decoration {
@@ -33,6 +34,10 @@ body {
   max-width: 1104px;
   margin: auto;
 }
+.main section .under-line {
+  border-bottom: 1px solid $color-sign-input-border;
+  padding-bottom: 80px;
+}
 .logo {
   width: 32px;
   height: 32px;
@@ -50,25 +55,12 @@ h2.title {
   }
 }
 h3.mini-title {
-  @include font-style(
-    $color-description,
-    $font-main,
-    700,
-    24px,
-    1.416,
-    -0.25px
-  );
-  @include mediaMobile{
-    @include font-style(
-        $color-description,
-        $font-main,
-        700,
-        20px,
-        1.416,
-        -0.25px
-      );
+  @include font-style($color-title, $font-main, 700, 32px, 1.3125, -0.25px);
+  @include mediaMobile {
+    @include font-style($color-title, $font-main, 700, 28px, 1.3125, -0.25px);
   }
 }
+
 h4.sub-title {
   @include font-style($color-description, $font-main, 400, 20px, 1.5, -0.25px);
   @include mediaMobile {
@@ -78,6 +70,29 @@ h4.sub-title {
       400,
       17px,
       1.5,
+      -0.25px
+    );
+  }
+}
+h4.accent-sub-title {
+  @include font-style($color-accent, $font-accent, 400, 20px, 30px, 0.25px);
+}
+h5.mini-title {
+  @include font-style(
+    $color-description,
+    $font-main,
+    700,
+    24px,
+    1.416,
+    -0.25px
+  );
+  @include mediaMobile {
+    @include font-style(
+      $color-description,
+      $font-main,
+      700,
+      20px,
+      1.416,
       -0.25px
     );
   }

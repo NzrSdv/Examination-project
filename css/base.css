@@ -60,20 +60,20 @@ button, input {
   display: none;
 }
 
-.main .sign-form .container .form .selection-text, .main .sign-form .container .form .google-btn .google-ico, .main .sign-form .container #sign-in .additional-info-section .link-label, .main .sign-form .container #sign-in .additional-info-section, .header--bottom .container .text--content .buttons, .header .header--top .container .nav .nav--list, .header .header--top .container {
+.solutions .container .solutions--main-content .card .card-texts .check-list .list-elements, .solutions .container .solutions--main-content .card, .main .sign-form .container .form .selection-text, .main .sign-form .container .form .google-btn .google-ico, .main .sign-form .container #sign-in .additional-info-section .link-label, .main .sign-form .container #sign-in .additional-info-section, .header--bottom .container .text--content .buttons, .header .header--top .container .nav .nav--list, .header .header--top .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.majorities .container .majorities--cards .card .card--text, .majorities .container .majorities--cards .card, .majorities .container .majorities--text-content, .majorities .container, .main .sign-form .container .form .input-complex-section .input-complex, .main .sign-form .container .form .input-complex-section, .main .sign-form .container .form, .main .sign-form .container, .header--bottom .container .video--content, .header--bottom .container .text--content, .header--bottom .container {
+.solutions .container .solutions--main-content .card .card-texts .titles--up, .solutions .container .solutions--main-content .card .card-texts, .solutions .container .solutions--main-content, .solutions .container .solutions--text-content, .solutions .container, .majorities .container .majorities--cards .card .card--text, .majorities .container .majorities--cards .card, .majorities .container .majorities--text-content, .majorities .container, .main .sign-form .container .form .input-complex-section .input-complex, .main .sign-form .container .form .input-complex-section, .main .sign-form .container .form, .main .sign-form .container, .header--bottom .container .video--content, .header--bottom .container .text--content, .header--bottom .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
-.majorities .container .majorities--cards .card .accent--img, .header--bottom .container .video--content .play-btn {
+.solutions .container .solutions--text-content .motivational--block, .majorities .container .majorities--cards .card .accent--img, .header--bottom .container .video--content .play-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -431,8 +431,6 @@ button, input {
 }
 .majorities .container {
   gap: 52px;
-  border-bottom: 1px solid rgb(51, 54, 58);
-  padding-bottom: 80px;
 }
 .majorities .container .majorities--text-content {
   text-align: center;
@@ -480,8 +478,92 @@ button, input {
   gap: 8px;
 }
 
+.solutions {
+  padding-top: 80px;
+}
+.solutions .container {
+  gap: 80px;
+}
+.solutions .container .solutions--text-content {
+  max-width: 768px;
+  text-align: center;
+  gap: 16px;
+}
+.solutions .container .solutions--text-content .motivational--block {
+  width: 186px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: rgb(198, 246, 213);
+}
+.solutions .container .solutions--text-content .motivational--block .text {
+  color: rgb(54, 162, 105);
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: initial;
+}
+.solutions .container .solutions--main-content {
+  gap: 80px;
+}
+.solutions .container .solutions--main-content .card {
+  gap: 64px;
+}
+@media (max-width: 1024px) {
+  .solutions .container .solutions--main-content .card {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.solutions .container .solutions--main-content .card-reverse .card-texts {
+  order: 1;
+}
+@media (max-width: 1024px) {
+  .solutions .container .solutions--main-content .card-reverse .card-texts {
+    order: 0;
+  }
+}
+.solutions .container .solutions--main-content .card-reverse .card-img {
+  order: 0;
+}
+@media (max-width: 1024px) {
+  .solutions .container .solutions--main-content .card-reverse .card-img {
+    order: 1;
+  }
+}
+.solutions .container .solutions--main-content .card .card-texts {
+  max-width: 500px;
+  align-items: flex-start;
+  gap: 16px;
+}
+@media (max-width: 1024px) {
+  .solutions .container .solutions--main-content .card .card-texts {
+    align-items: center;
+    text-align: center;
+  }
+}
+.solutions .container .solutions--main-content .card .card-texts .titles--up {
+  align-items: flex-start;
+  gap: 9px;
+}
+@media (max-width: 1024px) {
+  .solutions .container .solutions--main-content .card .card-texts .titles--up {
+    align-items: center;
+  }
+}
+.solutions .container .solutions--main-content .card .card-texts .check-list .list-elements {
+  justify-content: flex-start;
+  gap: 9px;
+}
+.solutions .container .solutions--main-content .card .card-img {
+  width: minmax(71dvw, 540px);
+}
+.solutions .container .solutions--main-content .card .card-img img {
+  max-width: 100%;
+}
+
 body {
-  padding: 0 20px;
+  padding: 0 5dvw;
   background-color: rgb(21, 23, 25);
   position: relative;
 }
@@ -506,6 +588,11 @@ body .decoration {
 .container {
   max-width: 1104px;
   margin: auto;
+}
+
+.main section .under-line {
+  border-bottom: 1px solid rgb(51, 54, 58);
+  padding-bottom: 80px;
 }
 
 .logo {
@@ -552,20 +639,20 @@ h2.title {
 }
 
 h3.mini-title {
-  color: rgb(155, 169, 180);
+  color: rgb(217, 227, 234);
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 1.416;
+  font-size: 32px;
+  line-height: 1.3125;
   letter-spacing: -0.25px;
 }
 @media (max-width: 470px) {
   h3.mini-title {
-    color: rgb(155, 169, 180);
+    color: rgb(217, 227, 234);
     font-family: "Inter", sans-serif;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 1.416;
+    font-size: 28px;
+    line-height: 1.3125;
     letter-spacing: -0.25px;
   }
 }
@@ -585,6 +672,34 @@ h4.sub-title {
     font-weight: 400;
     font-size: 17px;
     line-height: 1.5;
+    letter-spacing: -0.25px;
+  }
+}
+
+h4.accent-sub-title {
+  color: rgb(93, 93, 255);
+  font-family: "Architects Daughter", cursive;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.25px;
+}
+
+h5.mini-title {
+  color: rgb(155, 169, 180);
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.416;
+  letter-spacing: -0.25px;
+}
+@media (max-width: 470px) {
+  h5.mini-title {
+    color: rgb(155, 169, 180);
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.416;
     letter-spacing: -0.25px;
   }
 }
