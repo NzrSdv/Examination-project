@@ -29,7 +29,11 @@
   border-radius: 2px;
   padding: 10px 20px;
 }
-
+@mixin mediaLaptop{
+  @media (max-width:$laptop) {
+    @content;
+  }
+}
 @mixin  mediaTablet {
   @media (max-width:$tablet) {
     @content;

@@ -66,22 +66,19 @@ button, input {
   align-items: center;
 }
 
-.main .sign-form .container .form .input-complex-section .input-complex, .main .sign-form .container .form .input-complex-section, .main .sign-form .container .form, .main .sign-form .container, .header--bottom .container .video--content, .header--bottom .container .text--content, .header--bottom .container {
+.majorities .container .majorities--cards .card .card--text, .majorities .container .majorities--cards .card, .majorities .container .majorities--text-content, .majorities .container, .main .sign-form .container .form .input-complex-section .input-complex, .main .sign-form .container .form .input-complex-section, .main .sign-form .container .form, .main .sign-form .container, .header--bottom .container .video--content, .header--bottom .container .text--content, .header--bottom .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
-.header--bottom .container .video--content .play-btn {
+.majorities .container .majorities--cards .card .accent--img, .header--bottom .container .video--content .play-btn {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.header {
-  padding: 0 30px;
-}
 .header .header--top {
   position: relative;
 }
@@ -147,6 +144,7 @@ button, input {
 }
 .header--bottom .container {
   gap: 64px;
+  position: relative;
 }
 .header--bottom .container .text--content {
   max-width: 768px;
@@ -225,14 +223,15 @@ button, input {
   max-height: 551px;
   position: absolute;
   z-index: -1;
-  left: 83px;
-  bottom: -63px;
+  left: 10%;
+  bottom: -100px;
 }
 @media (max-width: 768px) {
   .header--bottom .container .decoration-second {
     width: 300px;
     height: 294px;
     left: 0;
+    bottom: -100px;
   }
 }
 @media (max-width: 470px) {
@@ -253,12 +252,6 @@ button, input {
 .main .sign-form .container .title {
   padding: 0 10px;
   text-align: center;
-}
-.main .sign-form .container #sign-up {
-  height: 644px;
-}
-.main .sign-form .container #sign-in {
-  height: 444px;
 }
 .main .sign-form .container #sign-in .additional-info-section .link-label {
   gap: 8px;
@@ -281,7 +274,7 @@ button, input {
   border: 1px solid rgb(93, 93, 255);
 }
 .main .sign-form .container .form {
-  max-width: 401px;
+  width: min(80dvw, 401px);
   align-items: stretch;
   gap: 24px;
 }
@@ -341,6 +334,7 @@ button, input {
 }
 .main .sign-form .container .form .selection-text {
   align-items: center;
+  gap: 12px;
 }
 .main .sign-form .container .form .selection-text .description {
   text-align: center;
@@ -432,7 +426,62 @@ button, input {
   letter-spacing: -0.25px;
 }
 
+.majorities {
+  margin-top: 128px;
+}
+.majorities .container {
+  gap: 52px;
+  border-bottom: 1px solid rgb(51, 54, 58);
+  padding-bottom: 80px;
+}
+.majorities .container .majorities--text-content {
+  text-align: center;
+  max-width: 768px;
+  gap: 44px;
+}
+.majorities .container .majorities--text-content .title {
+  max-width: 768px;
+}
+.majorities .container .majorities--text-content .sub-title {
+  max-width: 768px;
+}
+.majorities .container .majorities--cards {
+  display: grid;
+  grid-template-rows: repeat(2, 230px);
+  grid-template-columns: repeat(3, 325px);
+  gap: 64px;
+}
+@media (max-width: 1024px) {
+  .majorities .container .majorities--cards {
+    grid-template-columns: repeat(2, 325px);
+  }
+}
+@media (max-width: 768px) {
+  .majorities .container .majorities--cards {
+    grid-template-columns: repeat(1, 325px);
+  }
+}
+@media (max-width: 470px) {
+  .majorities .container .majorities--cards {
+    grid-template-columns: repeat(1, 280px);
+  }
+}
+.majorities .container .majorities--cards .card {
+  gap: 16px;
+}
+.majorities .container .majorities--cards .card .accent--img {
+  width: 64px;
+  height: 64px;
+  background-color: rgb(93, 93, 255);
+  border-radius: 50%;
+}
+.majorities .container .majorities--cards .card .card--text {
+  text-align: center;
+  gap: 8px;
+}
+
 body {
+  padding: 0 20px;
   background-color: rgb(21, 23, 25);
   position: relative;
 }
@@ -483,12 +532,69 @@ h1.title {
   }
 }
 
-.description {
+h2.title {
+  color: rgb(217, 227, 234);
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+}
+@media (max-width: 470px) {
+  h2.title {
+    color: rgb(217, 227, 234);
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+  }
+}
+
+h3.mini-title {
+  color: rgb(155, 169, 180);
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.416;
+  letter-spacing: -0.25px;
+}
+@media (max-width: 470px) {
+  h3.mini-title {
+    color: rgb(155, 169, 180);
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.416;
+    letter-spacing: -0.25px;
+  }
+}
+
+h4.sub-title {
   color: rgb(155, 169, 180);
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 20px;
-  line-height: 30px;
+  line-height: 1.5;
+  letter-spacing: -0.25px;
+}
+@media (max-width: 470px) {
+  h4.sub-title {
+    color: rgb(155, 169, 180);
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.5;
+    letter-spacing: -0.25px;
+  }
+}
+
+.description {
+  color: rgb(155, 169, 180);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
   letter-spacing: -0.25px;
 }
 @media (max-width: 470px) {

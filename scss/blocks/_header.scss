@@ -1,5 +1,4 @@
 .header {
-  padding: 0 30px;
   .header--top {
     position: relative;
     .container {
@@ -73,6 +72,7 @@
   .container {
     @extend %flex-y;
     gap: 64px;
+    position: relative;
     .text--content {
       max-width: 768px;
       min-height: 218px;
@@ -151,12 +151,14 @@
     max-height: 551px;
     position: absolute;
     z-index: -1;
-    left: 83px;
-    bottom:-63px;
+    left: 10%;
+    bottom:-100px;
     @include mediaTablet{
       width: 300px;
       height: 294px;
       left:0;
+    bottom:-100px;
+
     }
     @include mediaMobile{
       width: minmax(128px,188px);

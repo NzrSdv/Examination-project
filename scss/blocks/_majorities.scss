@@ -1,0 +1,56 @@
+.majorities {
+    margin-top: 128px;
+    .container {
+        @extend %flex-y;
+        gap:52px;
+        border-bottom: 1px solid $color-sign-input-border;
+        padding-bottom: 80px;
+        .majorities--text-content {
+            text-align: center;
+            max-width: 768px;
+            @extend %flex-y;
+
+            gap:44px;
+            .title {
+            max-width: 768px;
+
+            }
+            .sub-title {
+                max-width: 768px;
+            
+            }
+        }
+        .majorities--cards {
+            display: grid;
+            grid-template-rows: repeat(2,230px);
+            grid-template-columns: repeat(3,325px);
+            gap:64px;
+            @include mediaLaptop{
+            grid-template-columns: repeat(2,325px);
+            }
+            @include mediaTablet{
+                grid-template-columns: repeat(1,325px);
+            }
+            @include mediaMobile{
+                grid-template-columns: repeat(1,280px);
+
+            }
+            .card {
+                @extend %flex-y;
+                gap:16px;
+                .accent--img {
+                    width: 64px;
+                    height: 64px;
+                    background-color: $color-accent;
+                    border-radius: 50%;
+                    @extend %flex-center;
+                }
+                .card--text{
+                    @extend %flex-y;
+                    text-align: center;
+                    gap:8px;
+                }
+            }
+    }
+}
+}

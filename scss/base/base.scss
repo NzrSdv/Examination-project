@@ -2,53 +2,96 @@
 @import "./_vars.scss";
 @import "./_mixins-extends.scss";
 
-@import "../blocks/_header.scss"; 
+@import "../blocks/_header.scss";
 
 @import "../blocks/_sign.scss";
-
-body{
-    &::-webkit-scrollbar{
-        display: none;
+@import "../blocks/_majorities.scss";
+body {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  padding: 0 20px;
+  background-color: $color-bg;
+  position: relative;
+  .decoration {
+    z-index: -2;
+    max-width: 501px;
+    max-height: 364px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    img {
+      @include mediaTablet {
+        width: 300px;
+        height: 217px;
+      }
     }
-    background-color: $color-bg;
-    position: relative;
-    .decoration{
-        z-index: -2;
-        max-width: 501px;
-        max-height: 364px;
-        position: absolute;
-        top: 0;
-        right: 0;
-       img{
-        @include mediaTablet{
-            width: 300px;
-            height: 217px;
-        }
-       }
-    }
+  }
 }
 
-.container{
-    max-width: 1104px;
-    margin: auto;
+.container {
+  max-width: 1104px;
+  margin: auto;
 }
 .logo {
-    width: 32px;
-    height: 32px;
+  width: 32px;
+  height: 32px;
 }
-h1{
-    &.title{
-        @include font-style($color-title,$font-main,800,52px,1.2,-.5px);
-        @include mediaMobile{
-        @include font-style($color-title,$font-main,800,34px,1.2,-.5px);
-            
-        }
-    }
+h1.title {
+  @include font-style($color-title, $font-main, 800, 52px, 1.2, -0.5px);
+  @include mediaMobile {
+    @include font-style($color-title, $font-main, 800, 34px, 1.2, -0.5px);
+  }
 }
-.description{
-    @include font-style($color-description,$font-main,400,20px,30px,-.25px);
-    @include mediaMobile{
-    @include font-style($color-description,$font-main,400,16px,24px,-.25px);
-
-    }
+h2.title {
+  @include font-style($color-title, $font-main, 800, 40px, 1.25, -0.5px);
+  @include mediaMobile {
+    @include font-style($color-title, $font-main, 800, 28px, 1.25, -0.5px);
+  }
+}
+h3.mini-title {
+  @include font-style(
+    $color-description,
+    $font-main,
+    700,
+    24px,
+    1.416,
+    -0.25px
+  );
+  @include mediaMobile{
+    @include font-style(
+        $color-description,
+        $font-main,
+        700,
+        20px,
+        1.416,
+        -0.25px
+      );
+  }
+}
+h4.sub-title {
+  @include font-style($color-description, $font-main, 400, 20px, 1.5, -0.25px);
+  @include mediaMobile {
+    @include font-style(
+      $color-description,
+      $font-main,
+      400,
+      17px,
+      1.5,
+      -0.25px
+    );
+  }
+}
+.description {
+  @include font-style($color-description, $font-main, 400, 18px, 27px, -0.25px);
+  @include mediaMobile {
+    @include font-style(
+      $color-description,
+      $font-main,
+      400,
+      16px,
+      24px,
+      -0.25px
+    );
+  }
 }

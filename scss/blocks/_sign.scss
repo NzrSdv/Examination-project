@@ -11,10 +11,9 @@
         text-align: center;
       }
       #sign-up{
-        height: 644px;
+
       }
       #sign-in{
-        height: 444px;
           
         .additional-info-section {
           @extend %flex-x;
@@ -46,7 +45,7 @@
         }
       }
       .form {
-        max-width: 401px;
+        width: min(80dvw,401px);
         @extend %flex-y;
         align-items: stretch;
         gap:24px;
@@ -109,6 +108,7 @@
         .selection-text {
           @extend %flex-x;
           align-items: center;
+          gap:12px; 
           .description {
               text-align: center;
             @include font-style(
