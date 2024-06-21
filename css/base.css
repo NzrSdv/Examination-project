@@ -213,7 +213,7 @@ button, input {
 .header--bottom .container .video--content .play-btn .play-btn-triangle {
   width: 40%;
   aspect-ratio: 22/17;
-  background: url("../../imgs/header/play-btn-ico.svg");
+  background: url("/../imgs/header/play-btn-ico.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -328,10 +328,6 @@ button, input {
   left: 16px;
   justify-content: flex-start;
 }
-.main .sign-form .container .form .google-btn .google-ico .icon {
-  width: 14px;
-  height: 14px;
-}
 .main .sign-form .container .form .selection-text {
   align-items: center;
   gap: 12px;
@@ -345,30 +341,10 @@ button, input {
   line-height: 1.5;
   letter-spacing: -0.25px;
 }
-@media (max-width: 470px) {
-  .main .sign-form .container .form .selection-text .description {
-    color: rgb(155, 169, 180);
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.5;
-    letter-spacing: -0.25px;
-  }
-}
-.main .sign-form .container .form .selection-text .line-dots {
-  width: 90px;
-  height: 1px;
-  border-bottom: 1px dotted rgb(51, 54, 58);
-}
-.main .sign-form .container .form .input-complex-section {
-  gap: 16px;
+.main .sign-form .container .form .selection-text .input-complex {
   align-items: stretch;
 }
-.main .sign-form .container .form .input-complex-section .input-complex {
-  align-items: stretch;
-  gap: 4px;
-}
-.main .sign-form .container .form .input-complex-section .input-complex .label {
+.main .sign-form .container .form .selection-text .input-complex .label {
   color: rgb(197, 210, 220);
   font-family: "Inter", sans-serif;
   font-weight: 500;
@@ -377,17 +353,17 @@ button, input {
   letter-spacing: initial;
   position: relative;
 }
-.main .sign-form .container .form .input-complex-section .input-complex .label:after {
+.main .sign-form .container .form .selection-text .input-complex .label:after {
   content: "*";
   color: rgb(229, 61, 62);
   position: absolute;
 }
-.main .sign-form .container .form .input-complex-section .input-complex .input {
+.main .sign-form .container .form .selection-text .input-complex .input {
   border: 1px solid rgb(51, 54, 58);
   background: transparent;
   color: rgb(112, 125, 134);
 }
-.main .sign-form .container .form .input-complex-section .privacy-text {
+.main .sign-form .container .form .selection-text .privacy-text {
   text-align: center;
   color: rgb(112, 125, 134);
   font-family: "Inter", sans-serif;
@@ -396,7 +372,7 @@ button, input {
   line-height: 24px;
   letter-spacing: -0.25px;
 }
-.main .sign-form .container .form .input-complex-section .privacy-text a {
+.main .sign-form .container .form .selection-text .privacy-text a {
   text-decoration: underline;
   color: rgb(155, 169, 180);
   font-family: "Inter", sans-serif;
@@ -405,10 +381,10 @@ button, input {
   line-height: 24px;
   letter-spacing: -0.25px;
 }
-.main .sign-form .container .form .SignUp-btn {
+.main .sign-form .container .form .selection-text .SignUp-btn {
   background-color: rgb(93, 93, 255);
 }
-.main .sign-form .container .form .link-label {
+.main .sign-form .container .form .selection-text .link-label {
   text-align: center;
   color: rgb(155, 169, 180);
   font-family: "Inter", sans-serif;
@@ -417,7 +393,7 @@ button, input {
   line-height: 24px;
   letter-spacing: -0.25px;
 }
-.main .sign-form .container .form .link {
+.main .sign-form .container .form .selection-text .link-label .link {
   color: rgb(93, 93, 255);
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -852,6 +828,7 @@ body .decoration {
 .container {
   max-width: 1104px;
   margin: 0 auto;
+  animation: photo-show ease-in-out 1s;
 }
 
 .container-titles {
@@ -1001,3 +978,20 @@ h6.title {
     letter-spacing: -0.25px;
   }
 }
+
+@keyframes photo-show {
+  from {
+    transform-origin: center;
+    scale: 0.4;
+    opacity: 0;
+  }
+  to {
+    transform-origin: center;
+    scale: 1;
+    opacity: 1;
+  }
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> a8958fc0dc8872aa2d24bbdcd02c57de9869393c
