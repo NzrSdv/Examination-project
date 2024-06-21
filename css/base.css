@@ -60,7 +60,7 @@ button, input {
   display: none;
 }
 
-.footer .footer-bottom .container .social-media-links, .footer .footer-bottom .container, .footer .footer--top .container .right-footer, .footer .footer--top .container, .joining .container .input-content, .joining .container, .comments .container .comments-cards .card .person-info, .comments .container .comments-cards, .solutions .container .solutions--main-content .card .card-texts .check-list .list-elements, .solutions .container .solutions--main-content .card, .main .sign-form .container .form .selection-text, .main .sign-form .container .form .google-btn .google-ico, .main .sign-form .container #sign-in .additional-info-section .link-label, .main .sign-form .container #sign-in .additional-info-section, .header--bottom .container .text--content .buttons, .header .header--top .container .nav .nav--list, .header .header--top .container {
+.footer .footer-bottom .container .social-media-links, .footer .footer-bottom .container, .footer .footer--top .container .right-footer, .footer .footer--top .container, .joining .container .input-content, .joining .container, .comments .container .comments-cards .card .person-info, .comments .container .comments-cards, .solutions .container .solutions--main-content .card .card-texts .check-list .list-elements, .solutions .container .solutions--main-content .card, .main .sign-form .container .form .selection-text, .main .sign-form .container #sign-in .additional-info-section .link-label, .main .sign-form .container #sign-in .additional-info-section, .header--bottom .container .text--content .buttons, .header .header--top .container .nav .nav--list, .header .header--top .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -73,7 +73,7 @@ button, input {
   align-items: center;
 }
 
-.footer .footer-bottom .container .social-media-links .social-link, .solutions .container .container-titles .motivational--block, .majorities .container .majorities--cards .card .accent--img, .header--bottom .container .video--content .play-btn {
+.footer .footer-bottom .container .social-media-links .social-link, .solutions .container .container-titles .motivational--block, .majorities .container .majorities--cards .card .accent--img, .main .sign-form .container .form .google-btn .google-ico, .header--bottom .container .video--content .play-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -341,10 +341,30 @@ button, input {
   line-height: 1.5;
   letter-spacing: -0.25px;
 }
-.main .sign-form .container .form .selection-text .input-complex {
+@media (max-width: 470px) {
+  .main .sign-form .container .form .selection-text .description {
+    color: rgb(155, 169, 180);
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: -0.25px;
+  }
+}
+.main .sign-form .container .form .selection-text .line-dots {
+  width: 90px;
+  height: 1px;
+  border-bottom: 1px dotted rgb(51, 54, 58);
+}
+.main .sign-form .container .form .input-complex-section {
+  gap: 16px;
   align-items: stretch;
 }
-.main .sign-form .container .form .selection-text .input-complex .label {
+.main .sign-form .container .form .input-complex-section .input-complex {
+  align-items: stretch;
+  gap: 4px;
+}
+.main .sign-form .container .form .input-complex-section .input-complex .label {
   color: rgb(197, 210, 220);
   font-family: "Inter", sans-serif;
   font-weight: 500;
@@ -353,17 +373,17 @@ button, input {
   letter-spacing: initial;
   position: relative;
 }
-.main .sign-form .container .form .selection-text .input-complex .label:after {
+.main .sign-form .container .form .input-complex-section .input-complex .label:after {
   content: "*";
   color: rgb(229, 61, 62);
   position: absolute;
 }
-.main .sign-form .container .form .selection-text .input-complex .input {
+.main .sign-form .container .form .input-complex-section .input-complex .input {
   border: 1px solid rgb(51, 54, 58);
   background: transparent;
   color: rgb(112, 125, 134);
 }
-.main .sign-form .container .form .selection-text .privacy-text {
+.main .sign-form .container .form .input-complex-section .privacy-text {
   text-align: center;
   color: rgb(112, 125, 134);
   font-family: "Inter", sans-serif;
@@ -372,7 +392,7 @@ button, input {
   line-height: 24px;
   letter-spacing: -0.25px;
 }
-.main .sign-form .container .form .selection-text .privacy-text a {
+.main .sign-form .container .form .input-complex-section .privacy-text a {
   text-decoration: underline;
   color: rgb(155, 169, 180);
   font-family: "Inter", sans-serif;
@@ -381,10 +401,10 @@ button, input {
   line-height: 24px;
   letter-spacing: -0.25px;
 }
-.main .sign-form .container .form .selection-text .SignUp-btn {
+.main .sign-form .container .form .SignUp-btn {
   background-color: rgb(93, 93, 255);
 }
-.main .sign-form .container .form .selection-text .link-label {
+.main .sign-form .container .form .link-label {
   text-align: center;
   color: rgb(155, 169, 180);
   font-family: "Inter", sans-serif;
@@ -393,7 +413,7 @@ button, input {
   line-height: 24px;
   letter-spacing: -0.25px;
 }
-.main .sign-form .container .form .selection-text .link-label .link {
+.main .sign-form .container .form .link {
   color: rgb(93, 93, 255);
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -990,8 +1010,4 @@ h6.title {
     scale: 1;
     opacity: 1;
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> a8958fc0dc8872aa2d24bbdcd02c57de9869393c
