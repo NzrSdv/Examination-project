@@ -6,7 +6,7 @@
             @extend %flex-x;
             gap:24px;
             @include mediaLaptop{
-                flex-direction: column;
+                flex-flow: column wrap;
 
             }
             .card {

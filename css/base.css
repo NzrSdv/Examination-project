@@ -60,13 +60,13 @@ button, input {
   display: none;
 }
 
-.comments .container .comments-cards .card .person-info, .comments .container .comments-cards, .solutions .container .solutions--main-content .card .card-texts .check-list .list-elements, .solutions .container .solutions--main-content .card, .main .sign-form .container .form .selection-text, .main .sign-form .container .form .google-btn .google-ico, .main .sign-form .container #sign-in .additional-info-section .link-label, .main .sign-form .container #sign-in .additional-info-section, .header--bottom .container .text--content .buttons, .header .header--top .container .nav .nav--list, .header .header--top .container {
+.joining .container .input-content, .joining .container, .comments .container .comments-cards .card .person-info, .comments .container .comments-cards, .solutions .container .solutions--main-content .card .card-texts .check-list .list-elements, .solutions .container .solutions--main-content .card, .main .sign-form .container .form .selection-text, .main .sign-form .container .form .google-btn .google-ico, .main .sign-form .container #sign-in .additional-info-section .link-label, .main .sign-form .container #sign-in .additional-info-section, .header--bottom .container .text--content .buttons, .header .header--top .container .nav .nav--list, .header .header--top .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.container-titles, .comments .container .comments-cards .card, .comments .container, .solutions .container .solutions--main-content .card .card-texts .titles--up, .solutions .container .solutions--main-content .card .card-texts, .solutions .container .solutions--main-content, .solutions .container, .majorities .container .majorities--cards .card .card--text, .majorities .container .majorities--cards .card, .majorities .container, .main .sign-form .container .form .input-complex-section .input-complex, .main .sign-form .container .form .input-complex-section, .main .sign-form .container .form, .main .sign-form .container, .header--bottom .container .video--content, .header--bottom .container .text--content, .header--bottom .container {
+.container-titles, .joining .container .text-content, .comments .container .comments-cards .card, .comments .container, .solutions .container .solutions--main-content .card .card-texts .titles--up, .solutions .container .solutions--main-content .card .card-texts, .solutions .container .solutions--main-content, .solutions .container, .majorities .container .majorities--cards .card .card--text, .majorities .container .majorities--cards .card, .majorities .container, .main .sign-form .container .form .input-complex-section .input-complex, .main .sign-form .container .form .input-complex-section, .main .sign-form .container .form, .main .sign-form .container, .header--bottom .container .video--content, .header--bottom .container .text--content, .header--bottom .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -427,7 +427,7 @@ button, input {
 }
 
 .majorities {
-  padding-top: 128px;
+  padding-top: min(128px, 1dvh);
 }
 .majorities .container {
   gap: 52px;
@@ -560,7 +560,7 @@ button, input {
 }
 @media (max-width: 1024px) {
   .comments .container .comments-cards {
-    flex-direction: column;
+    flex-flow: column wrap;
   }
 }
 .comments .container .comments-cards .card {
@@ -618,6 +618,86 @@ button, input {
   letter-spacing: -0.25px;
 }
 
+.joining {
+  padding-top: 80px;
+}
+.joining .container {
+  padding: 65px 48px;
+  background: rgb(93, 93, 255);
+  position: relative;
+}
+@media (max-width: 768px) {
+  .joining .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+    padding-top: 50px;
+  }
+}
+.joining .container .text-content {
+  z-index: 2;
+  max-width: 480px;
+  align-items: flex-start;
+  gap: 8px;
+}
+@media (max-width: 768px) {
+  .joining .container .text-content {
+    align-items: center;
+  }
+}
+.joining .container .text-content .description {
+  color: rgb(226, 225, 255);
+}
+.joining .container .input-content {
+  height: 48px;
+  align-items: stretch;
+  gap: 8px;
+  z-index: 2;
+}
+@media (max-width: 768px) {
+  .joining .container .input-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+.joining .container .input-content .email-input {
+  max-width: 320px;
+  padding: 12px 16px;
+  background: rgb(75, 74, 207);
+  color: rgb(171, 171, 255);
+  border: 1px solid rgb(171, 171, 255);
+}
+@media (max-width: 768px) {
+  .joining .container .input-content .email-input {
+    text-align: center;
+  }
+}
+.joining .container .input-content .email-input::placeholder {
+  color: rgb(171, 171, 255);
+}
+.joining .container .input-content .subscribe-input {
+  box-sizing: border-box;
+  padding: 12px 32px;
+  background: rgb(255, 255, 255);
+  color: rgb(93, 93, 255);
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+  transition: ease-in-out 0.2s;
+}
+.joining .container .input-content .subscribe-input:hover {
+  background-color: rgb(93, 93, 255);
+  color: rgb(255, 255, 255);
+  border: 0.1px solid rgb(255, 255, 255);
+}
+.joining .container .joining-decoration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
 body {
   padding: 0 5dvw;
   background-color: rgb(21, 23, 25);

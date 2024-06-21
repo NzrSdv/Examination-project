@@ -1,5 +1,5 @@
 .majorities {
-    padding-top: 128px;
+    padding-top: min(128px,1dvh);
     .container {
         @extend %flex-y;
         gap:52px;
@@ -8,11 +8,9 @@
             gap:44px;
             .title {
             max-width: 768px;
-
             }
             .sub-title {
                 max-width: 768px;
-            
             }
         }
         .majorities--cards {
