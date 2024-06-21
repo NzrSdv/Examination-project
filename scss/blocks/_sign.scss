@@ -10,9 +10,6 @@
         padding: 0 10px;
         text-align: center;
       }
-      #sign-up{
-
-      }
       #sign-in{
           
         .additional-info-section {
@@ -97,12 +94,8 @@
               z-index: 2;
               top:12px;
               left: 16px;
-              @extend %flex-x;
-              justify-content: flex-start;
-              .icon{
-                width: 14px;
-                height: 14px;
-              }
+            @extend %flex-center;
+            justify-content: flex-start
             }
         }
         .selection-text {
