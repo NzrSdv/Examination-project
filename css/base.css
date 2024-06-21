@@ -60,20 +60,20 @@ button, input {
   display: none;
 }
 
-.solutions .container .solutions--main-content .card .card-texts .check-list .list-elements, .solutions .container .solutions--main-content .card, .main .sign-form .container .form .selection-text, .main .sign-form .container .form .google-btn .google-ico, .main .sign-form .container #sign-in .additional-info-section .link-label, .main .sign-form .container #sign-in .additional-info-section, .header--bottom .container .text--content .buttons, .header .header--top .container .nav .nav--list, .header .header--top .container {
+.comments .container .comments-cards .card .person-info, .comments .container .comments-cards, .solutions .container .solutions--main-content .card .card-texts .check-list .list-elements, .solutions .container .solutions--main-content .card, .main .sign-form .container .form .selection-text, .main .sign-form .container .form .google-btn .google-ico, .main .sign-form .container #sign-in .additional-info-section .link-label, .main .sign-form .container #sign-in .additional-info-section, .header--bottom .container .text--content .buttons, .header .header--top .container .nav .nav--list, .header .header--top .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.solutions .container .solutions--main-content .card .card-texts .titles--up, .solutions .container .solutions--main-content .card .card-texts, .solutions .container .solutions--main-content, .solutions .container .solutions--text-content, .solutions .container, .majorities .container .majorities--cards .card .card--text, .majorities .container .majorities--cards .card, .majorities .container .majorities--text-content, .majorities .container, .main .sign-form .container .form .input-complex-section .input-complex, .main .sign-form .container .form .input-complex-section, .main .sign-form .container .form, .main .sign-form .container, .header--bottom .container .video--content, .header--bottom .container .text--content, .header--bottom .container {
+.container-titles, .comments .container .comments-cards .card, .comments .container, .solutions .container .solutions--main-content .card .card-texts .titles--up, .solutions .container .solutions--main-content .card .card-texts, .solutions .container .solutions--main-content, .solutions .container, .majorities .container .majorities--cards .card .card--text, .majorities .container .majorities--cards .card, .majorities .container, .main .sign-form .container .form .input-complex-section .input-complex, .main .sign-form .container .form .input-complex-section, .main .sign-form .container .form, .main .sign-form .container, .header--bottom .container .video--content, .header--bottom .container .text--content, .header--bottom .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
-.solutions .container .solutions--text-content .motivational--block, .majorities .container .majorities--cards .card .accent--img, .header--bottom .container .video--content .play-btn {
+.solutions .container .container-titles .motivational--block, .majorities .container .majorities--cards .card .accent--img, .header--bottom .container .video--content .play-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -427,20 +427,18 @@ button, input {
 }
 
 .majorities {
-  margin-top: 128px;
+  padding-top: 128px;
 }
 .majorities .container {
   gap: 52px;
 }
-.majorities .container .majorities--text-content {
-  text-align: center;
-  max-width: 768px;
+.majorities .container .container-titles {
   gap: 44px;
 }
-.majorities .container .majorities--text-content .title {
+.majorities .container .container-titles .title {
   max-width: 768px;
 }
-.majorities .container .majorities--text-content .sub-title {
+.majorities .container .container-titles .sub-title {
   max-width: 768px;
 }
 .majorities .container .majorities--cards {
@@ -478,24 +476,16 @@ button, input {
   gap: 8px;
 }
 
-.solutions {
-  padding-top: 80px;
-}
 .solutions .container {
   gap: 80px;
 }
-.solutions .container .solutions--text-content {
-  max-width: 768px;
-  text-align: center;
-  gap: 16px;
-}
-.solutions .container .solutions--text-content .motivational--block {
+.solutions .container .container-titles .motivational--block {
   width: 186px;
   height: 30px;
   border-radius: 15px;
   background-color: rgb(198, 246, 213);
 }
-.solutions .container .solutions--text-content .motivational--block .text {
+.solutions .container .container-titles .motivational--block .text {
   color: rgb(54, 162, 105);
   font-family: "Inter", sans-serif;
   font-weight: 600;
@@ -562,6 +552,72 @@ button, input {
   max-width: 100%;
 }
 
+.comments .container {
+  gap: 80px;
+}
+.comments .container .comments-cards {
+  gap: 24px;
+}
+@media (max-width: 1024px) {
+  .comments .container .comments-cards {
+    flex-direction: column;
+  }
+}
+.comments .container .comments-cards .card {
+  max-width: 352px;
+  min-height: 339px;
+  background: rgb(37, 40, 44);
+  padding: 24px 24px 20px;
+  gap: 20px;
+  align-items: flex-start;
+}
+@media (max-width: 470px) {
+  .comments .container .comments-cards .card {
+    width: 80dvw;
+  }
+}
+.comments .container .comments-cards .card .profile-photo {
+  position: relative;
+}
+.comments .container .comments-cards .card .profile-photo .person-photo {
+  width: 48px;
+  height: 48px;
+}
+.comments .container .comments-cards .card .profile-photo .accent-comment-indicator {
+  position: absolute;
+  left: 36px;
+  top: 0;
+}
+.comments .container .comments-cards .card .person-info {
+  justify-content: flex-start;
+  border-top: 1px solid rgb(51, 54, 58);
+  max-width: 296px;
+  height: 44px;
+  padding: 20px 16px 0 0;
+  color: rgb(51, 54, 58);
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+}
+.comments .container .comments-cards .card .person-info .person-name {
+  color: rgb(217, 227, 234);
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+}
+.comments .container .comments-cards .card .person-info .person-job {
+  color: rgb(93, 93, 255);
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+}
+
 body {
   padding: 0 5dvw;
   background-color: rgb(21, 23, 25);
@@ -590,9 +646,15 @@ body .decoration {
   margin: auto;
 }
 
+.container-titles {
+  max-width: 768px;
+  text-align: center;
+  gap: 16px;
+}
+
 .main section .under-line {
   border-bottom: 1px solid rgb(51, 54, 58);
-  padding-bottom: 80px;
+  padding: 80px 0;
 }
 
 .logo {

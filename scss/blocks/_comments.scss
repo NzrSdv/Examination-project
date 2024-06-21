@@ -1,0 +1,54 @@
+.comments {
+    .container {
+        @extend %flex-y;
+        gap:80px;
+        .comments-cards {
+            @extend %flex-x;
+            gap:24px;
+            @include mediaLaptop{
+                flex-direction: column;
+
+            }
+            .card {
+                max-width: 352px;
+                min-height: 339px;
+                background: $color-comment-bg;
+            padding:24px 24px 20px;
+            @extend %flex-y;
+            gap:20px;
+            align-items: flex-start;
+            @include mediaMobile{
+                width: 80dvw;
+
+            }
+                .profile-photo {
+                    position: relative;
+                    .person-photo {
+                    width: 48px;
+                    height: 48px;
+                    }
+                    .accent-comment-indicator {
+                        position: absolute;
+                        left: 36px;
+                        top:0;
+                    }
+                }
+                .person-info {
+                    @extend %flex-x;
+                    justify-content: flex-start;
+                    border-top: 1px solid $color-second-btn;
+                    max-width: 296px;
+                    height: 44px;
+                    padding:20px 16px 0 0;
+                    @include font-style($color-second-btn,$font-main,500,16px,24px,-.25px);
+                    .person-name {
+                        @include font-style($color-title,$font-main,500,16px,24px,-.25px);
+                    }
+                    .person-job {
+                        @include font-style($color-accent,$font-main,500,16px,24px,-.25px);
+                    }
+                }
+            }
+        }
+    }
+}

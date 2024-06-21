@@ -5,8 +5,11 @@
 @import "../blocks/_header.scss";
 
 @import "../blocks/_sign.scss";
+
 @import "../blocks/_majorities.scss";
 @import "../blocks/_solutions.scss";
+@import "../blocks/_comments.scss";
+
 body {
   &::-webkit-scrollbar {
     display: none;
@@ -34,9 +37,15 @@ body {
   max-width: 1104px;
   margin: auto;
 }
+ .container-titles{
+  max-width: 768px;
+  @extend %flex-y;
+  text-align: center;
+  gap: 16px;
+}
 .main section .under-line {
-  border-bottom: 1px solid $color-sign-input-border;
-  padding-bottom: 80px;
+  border-bottom: 1px solid $color-second-btn;
+  padding:80px 0;
 }
 .logo {
   width: 32px;

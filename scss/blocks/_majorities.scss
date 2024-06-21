@@ -1,14 +1,10 @@
 .majorities {
-    margin-top: 128px;
+    padding-top: 128px;
     .container {
         @extend %flex-y;
         gap:52px;
         
-        .majorities--text-content {
-            text-align: center;
-            max-width: 768px;
-            @extend %flex-y;
-
+        .container-titles {
             gap:44px;
             .title {
             max-width: 768px;

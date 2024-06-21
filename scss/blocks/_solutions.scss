@@ -1,13 +1,9 @@
 .solutions {
-  padding-top: 80px;
   .container {
     @extend %flex-y;
     gap: 80px;
-    .solutions--text-content {
-      max-width: 768px;
-      @extend %flex-y;
-      text-align: center;
-      gap: 16px;
+    .container-titles {
+      
       .motivational--block {
         width: 186px;
         height: 30px;
