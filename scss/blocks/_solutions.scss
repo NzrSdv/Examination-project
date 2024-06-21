@@ -76,7 +76,7 @@
           }
         }
         .card-img {
-          width: minmax(71dvw, 540px);
+          width: min(80dvw, 540px);
           img {
             max-width: 100%;
           }
@@ -85,4 +85,3 @@
     }
   }
 }
-    

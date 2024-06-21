@@ -556,7 +556,7 @@ button, input {
   gap: 9px;
 }
 .solutions .container .solutions--main-content .card .card-img {
-  width: minmax(71dvw, 540px);
+  width: min(80dvw, 540px);
 }
 .solutions .container .solutions--main-content .card .card-img img {
   max-width: 100%;
