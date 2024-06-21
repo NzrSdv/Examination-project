@@ -213,7 +213,7 @@ button, input {
 .header--bottom .container .video--content .play-btn .play-btn-triangle {
   width: 40%;
   aspect-ratio: 22/17;
-  background: url("../../imgs/header/play-btn-ico.svg");
+  background: url("/../imgs/header/play-btn-ico.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -990,4 +990,8 @@ h6.title {
     scale: 1;
     opacity: 1;
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> a8958fc0dc8872aa2d24bbdcd02c57de9869393c
