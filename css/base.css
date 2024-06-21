@@ -663,8 +663,13 @@ button, input {
   max-width: 320px;
   padding: 12px 16px;
   background: rgb(75, 74, 207);
-  color: rgb(171, 171, 255);
   border: 1px solid rgb(171, 171, 255);
+  color: rgb(171, 171, 255);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.25px;
 }
 @media (max-width: 768px) {
   .joining .container .input-content .email-input {
@@ -673,10 +678,15 @@ button, input {
 }
 .joining .container .input-content .email-input::placeholder {
   color: rgb(171, 171, 255);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.25px;
 }
 .joining .container .input-content .subscribe-input {
-  box-sizing: border-box;
   padding: 12px 32px;
+  border: 1px solid rgb(255, 255, 255);
   background: rgb(255, 255, 255);
   color: rgb(93, 93, 255);
   font-family: "Inter", sans-serif;
@@ -687,9 +697,8 @@ button, input {
   transition: ease-in-out 0.2s;
 }
 .joining .container .input-content .subscribe-input:hover {
-  background-color: rgb(93, 93, 255);
+  background-color: transparent;
   color: rgb(255, 255, 255);
-  border: 0.1px solid rgb(255, 255, 255);
 }
 .joining .container .joining-decoration {
   position: absolute;
@@ -697,6 +706,7 @@ button, input {
   right: 0;
   z-index: 1;
 }
+
 .footer {
   min-height: 233px;
   align-items: stretch;
@@ -725,6 +735,8 @@ button, input {
 @media (max-width: 470px) {
   .footer .footer--top .container .left-footer {
     flex-flow: column wrap;
+    align-items: center;
+    text-align: center;
   }
 }
 .footer .footer--top .container .left-footer .description {
@@ -763,7 +775,7 @@ button, input {
   .footer .footer--top .container .right-footer .column--outer .footer-list {
     width: 100%;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     gap: min(20px, 10%);
   }
 }
