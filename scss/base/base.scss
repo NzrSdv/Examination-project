@@ -10,11 +10,13 @@
 @import "../blocks/_solutions.scss";
 @import "../blocks/_comments.scss";
 @import "../blocks/_joining.scss";
+@import "../blocks/_footer.scss";
+
 body {
   &::-webkit-scrollbar {
     display: none;
   }
-  padding: 0 4dvw;
+  padding: 0 5dvw;
   background-color: $color-bg;
   position: relative;
   .decoration {
@@ -35,7 +37,7 @@ body {
 
 .container {
   max-width: 1104px;
-  margin: auto;
+  margin: 0 auto;
 }
  .container-titles{
   max-width: 768px;
@@ -105,6 +107,9 @@ h5.mini-title {
       -0.25px
     );
   }
+}
+h6.title{
+  @include font-style($color-title,$font-main,500,14px,22px,initial);
 }
 .description {
   @include font-style($color-description, $font-main, 400, 18px, 27px, -0.25px);

@@ -1,0 +1,118 @@
+.footer {
+  min-height: 233px;
+  @extend %flex-y;
+  align-items: stretch;
+  margin-bottom: 67px ;
+  gap:20px;
+  .footer--top {
+    .container {
+      @extend %flex-x;
+      @include mediaLaptop {
+        flex-flow: column wrap;
+        align-items: stretch;
+        gap: 20px;
+      }
+      .left-footer {
+        // width: 352px;
+        @extend %flex-y;
+        align-items: flex-start;
+        gap: minmax(auto, 14px);
+        @include mediaLaptop {
+          width: auto;
+          flex-direction: row;
+          justify-content: space-between;
+          gap: 10px;
+        }
+        @include mediaMobile {
+          flex-flow: column wrap;
+        }
+        .description {
+          max-width: 352px;
+          @include font-style(
+            $color-sign-select,
+            $font-main,
+            400px,
+            16px,
+            24px,
+            -0.25px
+          );
+        }
+      }
+      .right-footer {
+        @extend %flex-x;
+        align-items: flex-start;
+
+        gap: min(1dvw, 80px);
+        @include mediaMobile {
+          flex-flow: column wrap;
+          // align-items: center;
+        }
+        .column--outer {
+          min-width: 153px;
+          @extend %flex-y;
+          align-items: flex-start;
+          gap: 4px;
+          @include mediaMobile {
+            width: 100%;
+          }
+          .footer-list {
+            @extend %flex-y;
+            align-items: flex-start;
+            gap: 4px;
+            @include mediaMobile {
+              width: 100%;
+              flex-flow: row wrap;
+              justify-content: flex-start;
+              gap:min(20px,10%);
+            }
+            .list-element {
+              .list-link {
+                @include font-style(
+                  $color-sign-select,
+                  $font-main,
+                  400,
+                  14px,
+                  22px,
+                  initial
+                );
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer-bottom {
+    .container {
+        @extend %flex-x;
+        @include mediaMobile{
+            flex-flow: column-reverse wrap;
+            gap:20px;
+        }
+      .description {
+        @include font-style($color-sign-select,$font-main,400,14px,22px,initial);
+        .name {
+        @include font-style($color-title,$font-main,500,14px,22px,initial);
+
+        }
+      }
+      .social-media-links {
+        @extend %flex-x;
+        gap: 16px;
+        order:0;
+        @include mediaMobile{
+            width: 100%;
+            justify-content:space-between;
+            
+        }
+        .social-link {
+            width:32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: $color-comment-bg;
+            @extend %flex-center;
+        }
+      }
+    }
+  }
+}

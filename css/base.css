@@ -60,20 +60,20 @@ button, input {
   display: none;
 }
 
-.joining .container .input-content, .joining .container, .comments .container .comments-cards .card .person-info, .comments .container .comments-cards, .solutions .container .solutions--main-content .card .card-texts .check-list .list-elements, .solutions .container .solutions--main-content .card, .main .sign-form .container .form .selection-text, .main .sign-form .container .form .google-btn .google-ico, .main .sign-form .container #sign-in .additional-info-section .link-label, .main .sign-form .container #sign-in .additional-info-section, .header--bottom .container .text--content .buttons, .header .header--top .container .nav .nav--list, .header .header--top .container {
+.footer .footer-bottom .container .social-media-links, .footer .footer-bottom .container, .footer .footer--top .container .right-footer, .footer .footer--top .container, .joining .container .input-content, .joining .container, .comments .container .comments-cards .card .person-info, .comments .container .comments-cards, .solutions .container .solutions--main-content .card .card-texts .check-list .list-elements, .solutions .container .solutions--main-content .card, .main .sign-form .container .form .selection-text, .main .sign-form .container .form .google-btn .google-ico, .main .sign-form .container #sign-in .additional-info-section .link-label, .main .sign-form .container #sign-in .additional-info-section, .header--bottom .container .text--content .buttons, .header .header--top .container .nav .nav--list, .header .header--top .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.container-titles, .joining .container .text-content, .comments .container .comments-cards .card, .comments .container, .solutions .container .solutions--main-content .card .card-texts .titles--up, .solutions .container .solutions--main-content .card .card-texts, .solutions .container .solutions--main-content, .solutions .container, .majorities .container .majorities--cards .card .card--text, .majorities .container .majorities--cards .card, .majorities .container, .main .sign-form .container .form .input-complex-section .input-complex, .main .sign-form .container .form .input-complex-section, .main .sign-form .container .form, .main .sign-form .container, .header--bottom .container .video--content, .header--bottom .container .text--content, .header--bottom .container {
+.container-titles, .footer .footer--top .container .right-footer .column--outer .footer-list, .footer .footer--top .container .right-footer .column--outer, .footer .footer--top .container .left-footer, .footer, .joining .container .text-content, .comments .container .comments-cards .card, .comments .container, .solutions .container .solutions--main-content .card .card-texts .titles--up, .solutions .container .solutions--main-content .card .card-texts, .solutions .container .solutions--main-content, .solutions .container, .majorities .container .majorities--cards .card .card--text, .majorities .container .majorities--cards .card, .majorities .container, .main .sign-form .container .form .input-complex-section .input-complex, .main .sign-form .container .form .input-complex-section, .main .sign-form .container .form, .main .sign-form .container, .header--bottom .container .video--content, .header--bottom .container .text--content, .header--bottom .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
-.solutions .container .container-titles .motivational--block, .majorities .container .majorities--cards .card .accent--img, .header--bottom .container .video--content .play-btn {
+.footer .footer-bottom .container .social-media-links .social-link, .solutions .container .container-titles .motivational--block, .majorities .container .majorities--cards .card .accent--img, .header--bottom .container .video--content .play-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -559,7 +559,7 @@ button, input {
   gap: 80px;
 }
 .comments .container .comments-cards {
-  max-width: 95%;
+  max-width: 100%;
   gap: 24px;
 }
 @media (max-width: 1024px) {
@@ -697,8 +697,125 @@ button, input {
   right: 0;
   z-index: 1;
 }
+.footer {
+  min-height: 233px;
+  align-items: stretch;
+  margin-bottom: 67px;
+  gap: 20px;
+}
+@media (max-width: 1024px) {
+  .footer .footer--top .container {
+    flex-flow: column wrap;
+    align-items: stretch;
+    gap: 20px;
+  }
+}
+.footer .footer--top .container .left-footer {
+  align-items: flex-start;
+  gap: minmax(auto, 14px);
+}
+@media (max-width: 1024px) {
+  .footer .footer--top .container .left-footer {
+    width: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
+@media (max-width: 470px) {
+  .footer .footer--top .container .left-footer {
+    flex-flow: column wrap;
+  }
+}
+.footer .footer--top .container .left-footer .description {
+  max-width: 352px;
+  color: rgb(155, 169, 180);
+  font-family: "Inter", sans-serif;
+  font-weight: 400px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+}
+.footer .footer--top .container .right-footer {
+  align-items: flex-start;
+  gap: min(1dvw, 80px);
+}
+@media (max-width: 470px) {
+  .footer .footer--top .container .right-footer {
+    flex-flow: column wrap;
+  }
+}
+.footer .footer--top .container .right-footer .column--outer {
+  min-width: 153px;
+  align-items: flex-start;
+  gap: 4px;
+}
+@media (max-width: 470px) {
+  .footer .footer--top .container .right-footer .column--outer {
+    width: 100%;
+  }
+}
+.footer .footer--top .container .right-footer .column--outer .footer-list {
+  align-items: flex-start;
+  gap: 4px;
+}
+@media (max-width: 470px) {
+  .footer .footer--top .container .right-footer .column--outer .footer-list {
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: min(20px, 10%);
+  }
+}
+.footer .footer--top .container .right-footer .column--outer .footer-list .list-element .list-link {
+  color: rgb(155, 169, 180);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: initial;
+}
+@media (max-width: 470px) {
+  .footer .footer-bottom .container {
+    flex-flow: column-reverse wrap;
+    gap: 20px;
+  }
+}
+.footer .footer-bottom .container .description {
+  color: rgb(155, 169, 180);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: initial;
+}
+.footer .footer-bottom .container .description .name {
+  color: rgb(217, 227, 234);
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: initial;
+}
+.footer .footer-bottom .container .social-media-links {
+  gap: 16px;
+  order: 0;
+}
+@media (max-width: 470px) {
+  .footer .footer-bottom .container .social-media-links {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+.footer .footer-bottom .container .social-media-links .social-link {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgb(37, 40, 44);
+}
+
 body {
-  padding: 0 4dvw;
+  padding: 0 5dvw;
   background-color: rgb(21, 23, 25);
   position: relative;
 }
@@ -722,7 +839,7 @@ body .decoration {
 
 .container {
   max-width: 1104px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .container-titles {
@@ -843,6 +960,15 @@ h5.mini-title {
     line-height: 1.416;
     letter-spacing: -0.25px;
   }
+}
+
+h6.title {
+  color: rgb(217, 227, 234);
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: initial;
 }
 
 .description {
