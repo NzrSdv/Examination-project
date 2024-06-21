@@ -546,35 +546,34 @@ button, input {
   gap: 9px;
 }
 .solutions .container .solutions--main-content .card .card-img {
-  width: min(80dvw, 540px);
+  width: min(95dvw, 540px);
 }
 .solutions .container .solutions--main-content .card .card-img img {
   max-width: 100%;
 }
 
+.comments {
+  padding-top: 80px;
+}
 .comments .container {
   gap: 80px;
 }
 .comments .container .comments-cards {
+  max-width: 95%;
   gap: 24px;
 }
 @media (max-width: 1024px) {
   .comments .container .comments-cards {
     flex-flow: column wrap;
+    align-items: stretch;
   }
 }
 .comments .container .comments-cards .card {
-  max-width: 352px;
-  min-height: 339px;
+  min-height: 15%;
   background: rgb(37, 40, 44);
   padding: 24px 24px 20px;
   gap: 20px;
   align-items: flex-start;
-}
-@media (max-width: 470px) {
-  .comments .container .comments-cards .card {
-    width: 80dvw;
-  }
 }
 .comments .container .comments-cards .card .profile-photo {
   position: relative;
@@ -699,7 +698,7 @@ button, input {
   z-index: 1;
 }
 body {
-  padding: 0 5dvw;
+  padding: 0 4dvw;
   background-color: rgb(21, 23, 25);
   position: relative;
 }
