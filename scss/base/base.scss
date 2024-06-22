@@ -21,15 +21,15 @@ body {
   background-color: $color-bg;
   position: relative;
   .decoration {
+    background: url("../imgs/decore/second-decore-one.png");
+    background-size: cover;
+    background-position: center;
     z-index: -2;
     width: 501px;
     height: 364px;
     position: absolute;
     top: 0;
     right: 0;
-    background: url("/imgs/decore/second-decore-one.png");
-    background-size: cover;
-  
     @include mediaTablet {
       width: 300px;
       height: 217px;
