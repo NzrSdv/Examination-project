@@ -27,18 +27,15 @@ body {
     position: absolute;
     top: 0;
     right: 0;
+    background: url("/imgs/decore/second-decore-one.png");
+    background-size: cover;
+  
     @include mediaTablet {
       width: 300px;
       height: 217px;
     }
-    img {
-      @include mediaTablet {
-        width: 300px;
-        height: 217px;
-      }
     }
   }
-}
 
 .container {
   max-width: 1104px;

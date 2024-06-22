@@ -837,15 +837,11 @@ body .decoration {
   position: absolute;
   top: 0;
   right: 0;
+  background: url("/imgs/decore/second-decore-one.png");
+  background-size: cover;
 }
 @media (max-width: 768px) {
   body .decoration {
-    width: 300px;
-    height: 217px;
-  }
-}
-@media (max-width: 768px) {
-  body .decoration img {
     width: 300px;
     height: 217px;
   }
