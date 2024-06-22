@@ -832,11 +832,17 @@ body::-webkit-scrollbar {
 }
 body .decoration {
   z-index: -2;
-  max-width: 501px;
-  max-height: 364px;
+  width: 501px;
+  height: 364px;
   position: absolute;
   top: 0;
   right: 0;
+}
+@media (max-width: 768px) {
+  body .decoration {
+    width: 300px;
+    height: 217px;
+  }
 }
 @media (max-width: 768px) {
   body .decoration img {

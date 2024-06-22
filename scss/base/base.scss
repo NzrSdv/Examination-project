@@ -22,11 +22,15 @@ body {
   position: relative;
   .decoration {
     z-index: -2;
-    max-width: 501px;
-    max-height: 364px;
+    width: 501px;
+    height: 364px;
     position: absolute;
     top: 0;
     right: 0;
+    @include mediaTablet {
+      width: 300px;
+      height: 217px;
+    }
     img {
       @include mediaTablet {
         width: 300px;
